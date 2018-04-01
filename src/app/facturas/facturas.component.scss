@@ -1,0 +1,23 @@
+
+.contenedorFacturas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a{
+        padding: 0px;
+        margin: 10px;
+    }
+    .factura{
+        width: 100px;
+        height: 110px;
+        background-color: grey;
+        // 
+        background-image: url("./../../assets/media/factura.png");
+        background-size: cover;
+        border: solid 2px grey; 
+    }
+}
+
+.facturaSeleccionada{
+    border: solid 4px red;
+}

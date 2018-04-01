@@ -1,0 +1,28 @@
+
+
+
+.containerAll{
+    display: flex;
+    justify-content: center;
+}
+
+span{
+    font-weight: bold;
+}
+
+.infoFactura{
+    /* display: inline-block; */
+    border: solid 2px red;
+    padding: 5px;
+    width: 285px;
+    margin: 20px;
+    margin-right: 25px;
+}
+
+.containerInfoProducto{
+    /* display: inline; */
+    border: solid 2px green;
+    width: 200px;
+    margin-top: 20px;
+}
+

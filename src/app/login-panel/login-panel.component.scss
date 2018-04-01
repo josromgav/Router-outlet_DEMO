@@ -1,0 +1,27 @@
+
+
+.containerWall{
+    max-width: 800px;
+    margin: auto;
+    img{
+        display: block;
+        width: 350px;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .containerCredenciales{
+        width: 35%;
+        margin: auto;
+        .input-credential{
+            margin-top: -10px;
+        }
+        .botonEntrar{
+            margin-top: 15px;
+            button{
+                margin-left: 94px;
+                width: 90px;
+                
+            }
+        }
+    }
+}
