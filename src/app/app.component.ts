@@ -13,14 +13,10 @@ export class AppComponent implements OnInit{
   path:any;
 
   constructor(private route: ActivatedRoute){
-    this.route.url.subscribe(url =>{
-      this.miURL = document.URL;
-    });
+    
   }
 
   ngOnInit(){
-    this.miURL = document.URL;
-    console.log(this.route.url);
-    this.path = this.route.snapshot.url.join('/');
+    
   }
 }

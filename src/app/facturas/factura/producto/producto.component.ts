@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductoComponent implements OnInit {
 
   producto:any;
-  url:any;
 
   constructor(private route: ActivatedRoute) {
     this.route.url.subscribe(url =>{
@@ -19,7 +18,6 @@ export class ProductoComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.url = this.route.snapshot.parent.parent.parent.parent;
     let id= this.route.snapshot.params['productoid'];
     switch(id){
       case 'Personal_de_cabina':

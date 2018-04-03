@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPanelComponent implements OnInit {
 
+  miURL = document.URL;
   constructor() { }
 
   ngOnInit() {

@@ -1,13 +1,29 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-factura',
   templateUrl: './factura.component.html',
-  styleUrls: ['./factura.component.css']
+  styleUrls: ['./factura.component.css'],
+  animations: [
+    trigger('myAwesomeAnimation', [
+      state('small', style({transform: 'scale(1)',})),
+      state('large', style({transform: 'scale(1.2)',})),
+    transition('small <=> large', animate('300ms ease-in')),
+
+    ]),
+    trigger('flyInOut', [
+      // state('in', style({transform: 'translateX(0)'})),
+      transition('void => *', [style({transform: 'translateY(-500%)'}),animate(300)]),
+      transition('* => void', [ animate(300 , style({transform: 'translateX(-100%)'}))])
+    ])
+    // Define animations here.
+ 
+   ]
 })
 export class FacturaComponent implements OnInit, OnChanges {
-
+  animationState: string = 'small';
   factura:any={};
   productos:number = 0;
   productosVisible:boolean = false;
@@ -80,9 +96,14 @@ export class FacturaComponent implements OnInit, OnChanges {
 
   showProductos(){
     this.productosVisible = !this.productosVisible;
+    this.animateMe();
   }
 
   ngOnChanges(){
   }
+
+  animateMe() {
+    this.animationState = (this.animationState === 'small' ? 'large' : 'small');
+}
 
 }

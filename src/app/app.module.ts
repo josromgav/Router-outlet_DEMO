@@ -12,6 +12,8 @@ import { AyudaComponent } from './ayuda/ayuda.component';
 import { FacturaComponent } from './facturas/factura/factura.component';
 import { ProductoComponent } from './facturas/factura/producto/producto.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const routes: Routes = [
   { path: '', component: LoginPanelComponent },
   { path: 'inicio', component: InicioComponent , children:
@@ -41,6 +43,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
