@@ -25,5 +25,7 @@ span{
     /* border: solid 2px red; */
     width: 200px;
     margin-top: 20px;
+    /* transform: scaleX(1.5) */
+    /* transform: skewY(20deg); */
 }
 
